@@ -2,6 +2,31 @@
 
 /* Todas as demais medias */
 
-@media print {
+@media print { /*IMPRESSÃO*/
     
+* {
+    font-family: 'Courier New', Courier, monospace;
 }
+
+body {
+    background-image: url(..imagens/back-print.jpg); /* desnecessário*/
+}
+
+main {
+    border: 2px solid black
+}
+main::after {
+    content: 'Essa impressão foi feita';
+}
+
+@media screen and (max-width:768px) and (max-width:992px) { /*TABLET*/
+    body:{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+}
+
+@media screen and (min-width:992px) and (max-wid: 1200px) { /*DESKTOP*/
+
+}
+
+@media screen and (min-width:1200px) { /* GRANDES TELAS */} }
